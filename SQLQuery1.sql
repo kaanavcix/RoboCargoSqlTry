@@ -1,1 +1,1 @@
-﻿select * from denemesqlserver
+﻿select *from Cargos

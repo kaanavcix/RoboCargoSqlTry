@@ -23,9 +23,9 @@ namespace WebAPI.Controllers
 
             if (result.Success)
             {
-                return Ok(result);
+                return Ok(result.GetValue);
             }
-            return BadRequest(result.Message);
+            return BadRequest();
         }
 
         [HttpGet("getbyorderno")]

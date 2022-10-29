@@ -48,7 +48,7 @@ namespace Bussiness.Concrete
         {
 
             
-           var result =  _cargosDal.GetAll(null) ;
+           var result =  _cargosDal.GetAllByLogisticUnits(null) ;
 
            
                 return new DataResult<List<Cargo>>(result, SuccessMessages.sucessMessageForGet, true);

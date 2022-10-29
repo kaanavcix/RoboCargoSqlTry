@@ -14,7 +14,7 @@ namespace Bussiness.ValidationRules.FluentValidation
         public CargosValidator()
         {
 
-            RuleFor(p => p.LojistikBirimKodu).NotNull();
+//            RuleFor(p => p.LojistikBirimKodu).NotNull();
             RuleFor(p => p.LojistikBirimAd).NotEmpty().MinimumLength(4);
             RuleFor(p => p.LojistikOpTipi).NotEmpty().MinimumLength(4);
             RuleFor(p => p.SipariNo).NotNull().GreaterThan(9);

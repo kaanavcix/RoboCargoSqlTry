@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// See https://aka.ms/new-console-template for more information
+using Bussiness.Abstract;
+using Bussiness.Concrete;
+using DataAccess.Concrete.EntityFramework;
 
-namespace UnitTest
+Console.WriteLine("Hello, World!");
+
+
+ICargosService cargosService = new CargosService(new EfCargosDal());
+
+var result = cargosService.GetAllCargosInfo();
+
+foreach (var cargos in result.GetValue)
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
+    Console.WriteLine(cargos.LojistikBirimAd);
 
-         //   ICargosService test1 = new CargosService();
-        }
-    }
 }
+

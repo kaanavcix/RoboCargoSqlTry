@@ -14,7 +14,11 @@ namespace DataAccess.Concrete.SqlServer
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { optionsBuilder.UseSqlServer(@"Server=KAAN-LAPTOP\ROBOCARGOSQL;Database=robocargosql;User Id=sa;Password=test@123"); }
-        
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+           modelBuilder.Entity<Cargo>().HasNoKey();
+        }
 
         public DbSet<Cargo> Cargos { get; set; }
        
